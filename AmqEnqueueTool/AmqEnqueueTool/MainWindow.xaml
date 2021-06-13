@@ -1,0 +1,128 @@
+﻿<Window x:Class="AmqEnqueueTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmqEnqueueTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" BorderBrush="#FFE21B1B">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock
+            x:Name="label"
+            Width="440"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Text="**********************Manually Enqueue Data to ActiveMQ***********************" FontSize="14" />
+            <TextBlock
+            Width="701"
+                Margin="0,8,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Text="(This setup only works for Dev Environment. For QA and Prod proper MappingSetName and ConnectionUri must set in App.config)" Height="30" FontSize="11" Foreground="#FF8D8A8A" />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36"></RowDefinition>
+                    <RowDefinition Height="32"></RowDefinition>
+                    <RowDefinition Height="160"></RowDefinition>
+                    <RowDefinition Height="32"></RowDefinition>
+                    <RowDefinition Height="48"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                    x:Name="label2"
+                    HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                    Text="AMQ MappingSetName Value"
+                           Margin="0,0,8,0"/>
+                <StackPanel 
+                    Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <TextBox
+                    x:Name="textBox2"
+                    Width="301"
+                    Height="22"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    TextWrapping="Wrap" Margin="0,7" />
+
+                    <ComboBox x:Name="combox" Margin="8,0" Height="24" Width="120" SelectedIndex="0"></ComboBox>
+                </StackPanel>
+
+                <TextBlock
+                    Grid.Row="1" Grid.Column="1"
+            x:Name="label1"
+            Width="423"
+            VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+            Text="(Should passed MappingSetName value not MappingSetName)"
+            Foreground="#FF858383" />
+
+                <TextBlock
+                    Grid.Row="2" Grid.Column="0"
+            x:Name="label2_Copy"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Text="Body Message"
+                    Margin="0,0,8,0"/>
+                <TextBox
+                    Grid.Row="2" Grid.Column="1"
+            x:Name="textBox2_Copy"
+            Width="427"
+            Height="148"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            AcceptsReturn="True"
+            TextWrapping="Wrap" Margin="0,6" />
+
+                <TextBlock
+            Grid.Row="3" Grid.Column="1"
+            x:Name="sampleText"
+            Width="355"
+            Height="22"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Foreground="#FF7C7979"
+            MouseLeftButtonDown="sampleText_MouseLeftButtonDown"
+            Text="(Eg: Slack body message here)"
+            TextDecorations="Underline"
+            TextWrapping="Wrap" 
+            />
+                <Button
+                   
+            Grid.Row="4" Grid.Column="1"
+            x:Name="button"
+            Width="415"
+            Height="26"
+            VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+            Click= "button_Click"
+            Content="Enqueue" Foreground="White" BorderBrush="#FF035C85" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF024472" Offset="1"/>
+                            <GradientStop Color="#FF015483"/>
+                            <GradientStop Color="#FF628BA8" Offset="0.553"/>
+                            <GradientStop Color="#FF9CB6B6" Offset="0.527"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

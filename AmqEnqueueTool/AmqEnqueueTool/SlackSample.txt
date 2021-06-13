@@ -1,0 +1,11 @@
+﻿{
+	"Body": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ps xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <p channel=\"Slack\" id=\"W247BP9Q9\" />\r\n  <RetryCount>3</RetryCount>\r\n</ps>",
+	"Headers": {
+		"OAuthAccountId": "",
+		"ClientId": "389",
+		"FasaId": "740",
+		"scheduledJobId": "ID:dev-intsvc-06-61904-636867927251135849-1:18:1:1:2",
+		"AMQ_SCHEDULED_DELAY": "900000"
+	},
+	"Timestamp": "2019-02-26T16:12:25.815-05:00"
+}

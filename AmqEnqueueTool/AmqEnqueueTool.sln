@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmqEnqueueTool", "AmqEnqueueTool\AmqEnqueueTool.csproj", "{FFCF784B-7CE5-42C7-AA5C-01B10A4179CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFCF784B-7CE5-42C7-AA5C-01B10A4179CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCF784B-7CE5-42C7-AA5C-01B10A4179CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCF784B-7CE5-42C7-AA5C-01B10A4179CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCF784B-7CE5-42C7-AA5C-01B10A4179CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BAE004D-4E00-4C55-BCA3-FD9739DCFC03}
+	EndGlobalSection
+EndGlobal
