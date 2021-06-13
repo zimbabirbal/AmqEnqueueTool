@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AmqEnqueueTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" BorderBrush="#FFE21B1B">
+        Title="AmqEnqueueTool" Height="600" Width="800" BorderBrush="#FFE21B1B">
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="86"></RowDefinition>
