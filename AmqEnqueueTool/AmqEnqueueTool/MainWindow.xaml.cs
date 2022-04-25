@@ -31,6 +31,7 @@ namespace AmqEnqueueTool
         MessageQueueClientPool _activeMqClientPool;
         Dictionary<string, string> _channelsCollection;
         int _numberOfEnqueuedItem;
+        string _dynamicMsg;
         public MainWindow()
         {
             InitializeComponent();
@@ -141,6 +142,12 @@ namespace AmqEnqueueTool
             label2MStatus2.Text = "running...";
             label2MStatus1.Text = "ItemsEnqueued: " + _numberOfEnqueuedItem;
 
+            _dynamicMsg = "LoadTest2022-";
+            if (!string.IsNullOrEmpty(generateMsg.Text))
+            {
+                _dynamicMsg = generateMsg.Text;
+            }
+
             try
             {
                 _activeMqClientPool = MessagingHelper.GetMessageQueueClientPool
@@ -236,7 +243,7 @@ namespace AmqEnqueueTool
             var curDate = DateTime.UtcNow;
 
             var guid = Guid.NewGuid().ToString();
-            var testId = "LoadTest2022-" + guid;
+            var testId = _dynamicMsg + guid;
             smfMessage.Header.DocumentDate = curDate;
             smfMessage.Header.SourceObjectId = testId;
             smfMessage.Header.RevisionId = testId;
@@ -244,10 +251,10 @@ namespace AmqEnqueueTool
             smfMessage.Header.ActionTime = curDate;
 
             var getItem = smfMessage.Content.Items[0];
-            getItem.Data = JsonConvert.SerializeObject(new { message = $"LoadTest2022-msg-{guid}" });
+            getItem.Data = JsonConvert.SerializeObject(new { message = $"{_dynamicMsg}-msg-{guid}" });
 
             var getItem1 = smfMessage.Content.Items[1];
-            getItem1.Data = string.Format($"LoadTest2022-msg-{guid}");
+            getItem1.Data = string.Format($"{_dynamicMsg}-msg-{guid}");
 
             smfMessage.RelatedObjects.Clear();
             var destinationPath = ConfigurationManager.AppSettings["SMFDestinationPath"];

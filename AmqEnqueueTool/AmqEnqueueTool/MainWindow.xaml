@@ -236,6 +236,7 @@
                             <ComboBox x:Name="comboxChannel" Grid.Row="4" Grid.Column="1" Margin="0,5,111,5" SelectedIndex="0"/>
                             <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
                                 <CheckBox x:Name="GenerateNewMessageEverytimeCheckBox" Content ="Generate new messages every time" Height="32" VerticalAlignment="Top"></CheckBox>
+                                <TextBox x:Name="generateMsg" Width="179" Margin="16,1,16,14" ></TextBox>
                             </StackPanel>
                             <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
                                 <CheckBox x:Name="RunInfinitelyCheckBox" Content ="Run infinitely"></CheckBox>
