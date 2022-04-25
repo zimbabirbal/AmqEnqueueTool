@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AmqEnqueueTool"
         mc:Ignorable="d"
-        Title="AmqEnqueueTool" Height="600" Width="800" BorderBrush="#FFE21B1B">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="AmqEnqueueTool" Height="747.284" Width="815.694" BorderBrush="#FFE21B1B">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="651" Margin="10,25,2,40" Width="796">
         <Grid.RowDefinitions>
             <RowDefinition Height="86"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -15,114 +15,277 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel HorizontalAlignment="Center">
-            <TextBlock
-            x:Name="label"
-            Width="440"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Text="**********************Manually Enqueue Data to ActiveMQ***********************" FontSize="14" />
-            <TextBlock
-            Width="701"
-                Margin="0,8,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Text="(This setup only works for Dev Environment. For QA and Prod proper MappingSetName and ConnectionUri must set in App.config)" Height="30" FontSize="11" Foreground="#FF8D8A8A" />
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="36"></RowDefinition>
-                    <RowDefinition Height="32"></RowDefinition>
-                    <RowDefinition Height="160"></RowDefinition>
-                    <RowDefinition Height="32"></RowDefinition>
-                    <RowDefinition Height="48"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="731" Margin="21,10,0,-543" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TabItem Header="Single Enqueue">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Center" Margin="0,0,0,404" Width="725">
+                        <TextBlock
+                            x:Name="label"
+                            Width="440"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="**********************Manually Enqueue Data to ActiveMQ***********************" FontSize="14" />
+                        <TextBlock
+                            Width="701"
+                            Margin="0,8,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="(This setup only works for Dev Environment. For QA and Prod proper MappingSetName and ConnectionUri must set in App.config)" Height="30" FontSize="11" Foreground="#FF8D8A8A" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="651">
+                        <Grid HorizontalAlignment="Center" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition Height="160"/>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition Height="48"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0"
-                    x:Name="label2"
-                    HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                    Text="AMQ MappingSetName Value"
-                           Margin="0,0,8,0"/>
-                <StackPanel 
-                    Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                    <TextBox
-                    x:Name="textBox2"
-                    Width="301"
-                    Height="22"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    TextWrapping="Wrap" Margin="0,7" />
+                            <TextBlock Grid.Row="0" Grid.Column="0"
+                                x:Name="label2"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="AMQ MappingSetName Value"
+                                Margin="0,0,8,0"/>
+                            <StackPanel 
+                                Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                                <TextBox
+                                    x:Name="textBox2"
+                                    Width="301"
+                                    Height="22"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap" Margin="0,7" />
 
-                    <ComboBox x:Name="combox" Margin="8,0" Height="24" Width="120" SelectedIndex="0"></ComboBox>
-                </StackPanel>
+                                <ComboBox x:Name="combox" Margin="8,0" Height="24" Width="120" SelectedIndex="0"/>
+                            </StackPanel>
 
-                <TextBlock
-                    Grid.Row="1" Grid.Column="1"
-            x:Name="label1"
-            Width="423"
-            VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-            Text="(Should passed MappingSetName value not MappingSetName)"
-            Foreground="#FF858383" />
+                            <TextBlock
+                                Grid.Row="1" Grid.Column="1"
+                                x:Name="label1"
+                                Width="423"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                Text="(Should passed MappingSetName value not MappingSetName)"
+                                Foreground="#FF858383" />
 
-                <TextBlock
-                    Grid.Row="2" Grid.Column="0"
-            x:Name="label2_Copy"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Text="Body Message"
-                    Margin="0,0,8,0"/>
-                <TextBox
-                    Grid.Row="2" Grid.Column="1"
-            x:Name="textBox2_Copy"
-            Width="427"
-            Height="148"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Center"
-            AcceptsReturn="True"
-            TextWrapping="Wrap" Margin="0,6" />
+                            <TextBlock
+                                Grid.Row="2" Grid.Column="0"
+                                x:Name="label2_Copy"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="Body Message"
+                                Margin="0,0,8,0"/>
+                            <TextBox
+                                Grid.Row="2" Grid.Column="1"
+                                x:Name="textBox2_Copy"
+                                Width="427"
+                                Height="148"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                AcceptsReturn="True"
+                                TextWrapping="Wrap" Margin="0,6" />
 
-                <TextBlock
-            Grid.Row="3" Grid.Column="1"
-            x:Name="sampleText"
-            Width="355"
-            Height="22"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Foreground="#FF7C7979"
-            MouseLeftButtonDown="sampleText_MouseLeftButtonDown"
-            Text="(Eg: Slack body message here)"
-            TextDecorations="Underline"
-            TextWrapping="Wrap" 
+                            <TextBlock
+                                Grid.Row="3" Grid.Column="1"
+                                x:Name="sampleText"
+                                Width="355"
+                                Height="22"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Foreground="#FF7C7979"
+                                MouseLeftButtonDown="sampleText_MouseLeftButtonDown"
+                                Text="(Eg: Slack body message here)"
+                                TextDecorations="Underline"
+                                TextWrapping="Wrap" 
             />
-                <Button
+                            <Button
                    
-            Grid.Row="4" Grid.Column="1"
-            x:Name="button"
-            Width="415"
-            Height="26"
-            VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-            Click= "button_Click"
-            Content="Enqueue" Foreground="White" BorderBrush="#FF035C85" >
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="#FF024472" Offset="1"/>
-                            <GradientStop Color="#FF015483"/>
-                            <GradientStop Color="#FF628BA8" Offset="0.553"/>
-                            <GradientStop Color="#FF9CB6B6" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                                Grid.Row="4" Grid.Column="1"
+                                x:Name="button"
+                                Width="427"
+                                Height="26"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Click= "btn_SingleEnqueue"
+                                Content="Enqueue" Foreground="#FF0C0404" BorderBrush="#FF035C85" Background="#FFFDFDFD" Margin="0,11" />
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Smf processor load test">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="54*"/>
+                        <ColumnDefinition Width="14*"/>
+                        <ColumnDefinition Width="657*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Center" Margin="0,0,0,404" Width="725" Grid.ColumnSpan="3">
+                        <TextBlock
+                            x:Name="labelM"
+                            Width="440"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="**********************Manually Enqueue Multiple Data to ActiveMQ***********************" FontSize="14" />
+                        <TextBlock
+                            Width="701"
+                            Margin="0,8,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="(This setup only works for Dev Environment. For QA and Prod proper MappingSetName and ConnectionUri must set in App.config)" Height="30" FontSize="11" Foreground="#FF8D8A8A" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="651" Grid.ColumnSpan="3" Margin="37,70,37,69">
+                        <Grid HorizontalAlignment="Center" Height="460" Margin="42,0,41,0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="48"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Row="0" Grid.Column="0"
+                                x:Name="clientIdL"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="Client Id"
+                                Margin="0,0,8,0"/>
+                            <TextBox
+                                    Grid.Row="0" Grid.Column="1"
+                                    x:Name="clientIdU"
+                                    Width="301"
+                                    Height="22"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap" Margin="0,7" />
+                            <TextBlock
+                                Grid.Row="1" Grid.Column="0"
+                                x:Name="fasaIdL"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="Fasa Id"
+                                Margin="0,0,8,0"/>
+                            <TextBox
+                                    Grid.Row="1" Grid.Column="1"
+                                    x:Name="fasaIdU"
+                                    Width="301"
+                                    Height="22"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap" Margin="0,7" />
+                            <TextBlock Grid.Row="2" Grid.Column="0"
+                                x:Name="pathSmf"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="Sammple Smf path"
+                                Margin="0,0,8,0"/>
+                            <StackPanel 
+                                Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                <TextBox
+                                    x:Name="smfPathU"
+                                    Width="301"
+                                    Height="22"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap" Margin="0,7" />
 
+                                <Button x:Name="loadSmf" Margin="8,8,0,7" Click="loadSmf_Click" Content="Load" Width="93"></Button>
+                            </StackPanel>
 
-            </Grid>
-        </StackPanel>
+                            <TextBlock Grid.Row="3" Grid.Column="0"
+                                x:Name="label2M"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="AMQ MappingSetName"
+                                Margin="0,0,8,0"/>
+                            <StackPanel 
+                                Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                                <TextBox
+                                    x:Name="textBox2M"
+                                    Width="301"
+                                    Height="22"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap" Margin="0,7" />
+
+                                <ComboBox x:Name="comboxM" Margin="8,4,8,5" Height="24" Width="95" SelectedIndex="0"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="4" Grid.Column="0"
+                                x:Name="label2Ms"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Text="Channel"
+                                Margin="0,0,8,0"/>
+                            <ComboBox x:Name="comboxChannel" Grid.Row="4" Grid.Column="1" Margin="0,5,111,5" SelectedIndex="0"/>
+                            <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                                <CheckBox x:Name="GenerateNewMessageEverytimeCheckBox" Content ="Generate new messages every time" Height="32" VerticalAlignment="Top"></CheckBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
+                                <CheckBox x:Name="RunInfinitelyCheckBox" Content ="Run infinitely"></CheckBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" >
+                                <CheckBox x:Name="StopAtCheckBox" Content ="Stop At (do not check it if Run infinitely checked)"></CheckBox>
+                                <TextBox
+                                    x:Name="textBox2MStopAt"
+                                    Width="106"
+                                    Height="22"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    TextWrapping="Wrap" Margin="24,0,0,0" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal">
+                                <Button
+                                x:Name="buttonM"
+                                Width="217"
+                                Height="26"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Content="Enqueue" Click="btn_smfLoadTest_Enqueue" Foreground="#FF0C0404" BorderBrush="#FF035C85" Background="#FFFDFDFD" Margin="0,11" />
+                                <Button x:Name="stopBtn" Click="stopBtn_Click" Content="Stop" Width="175" Margin="16,10,0,10">
+
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Grid.Row="9" Grid.Column="2" Orientation="Vertical">
+                                <TextBlock 
+                                x:Name="label2MStatus"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="Status:"
+                                Margin="0,0,8,0"/>
+                                <TextBlock 
+                                x:Name="label2MStatus1"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text=""
+                                Margin="0,0,8,0"/>
+                                <TextBlock 
+                                x:Name="label2MStatus2"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text=""
+                                Margin="0,0,8,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

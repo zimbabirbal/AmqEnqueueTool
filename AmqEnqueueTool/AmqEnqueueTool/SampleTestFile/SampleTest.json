@@ -1,0 +1,105 @@
+{
+  "OriginalVersion": "3.3",
+  "Version": "3.3",
+  "Processing": null,
+  "Header": {
+    "Action": 1,
+    "DocumentDate": "2021-06-29T19:55:59.0639Z",
+    "ActionTime": "2021-06-29T19:55:59.0639Z",
+    "Channel": "Slack",
+    "SourceObjectId": "CVB5F4ZP01624996559.063900",
+    "RevisionId": "CVB5F4ZP01624996559.063900",
+    "DocumentType": 7,
+    "SourceType": null,
+    "ClientId": null,
+    "AccountId": null,
+    "EntitlementCode": null,
+    "InReplyToMessagelId": null,
+    "Title": null,
+    "ThreadId": "CVB5F4ZP0",
+    "Topic": null,
+    "MeetingId": null,
+    "FingerprintMethod": null,
+    "ExtendedHeader": {
+      "Items": [
+        {
+          "Name": "ParticipantsRefreshMappingSet",
+          "Type": "string",
+          "Value": "SlackParticipants"
+        },
+        {
+          "Name": "UserExtendedMetaData",
+          "Type": "string",
+          "Value": "[{\"ParticipantId\":\"WULS9STHD\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"U062V5J03\",\"Team\":\"T024GE9EL\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W1H4NLL83\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W5GFF1JBX\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W76AQDQ5T\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W91S561GQ\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"WH0P7C2HJ\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"WLGQF32QP\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W012A9RFUV9\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W013BNFG5FB\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"W014CNL1ERM\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"U019L46Q517\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"},{\"ParticipantId\":\"U01Q5HU1GHX\",\"Team\":\"T29KZ003T\",\"Channel\":\"CVB5F4ZP0\"}]"
+        }
+      ]
+    }
+  },
+  "Participants": [
+    {
+      "SourceObjectId": "WULS9STHD",
+      "FirstName": null,
+      "LastName": null,
+      "DisplayName": null,
+      "Email": null,
+      "Timeline": null,
+      "Phone": null,
+      "Attributes": [],
+      "Refresh": false,
+      "Type": 1,
+      "Method": 0
+    },
+    {
+      "SourceObjectId": "U062V5J03",
+      "FirstName": null,
+      "LastName": null,
+      "DisplayName": null,
+      "Email": null,
+      "Timeline": null,
+      "Phone": null,
+      "Attributes": [],
+      "Refresh": false,
+      "Type": 2,
+      "Method": 0
+    }
+  ],
+  "Content": {
+    "Items": [
+      {
+        "Id": null,
+        "SourceObjectId": null,
+        "RevisionId": null,
+        "FingerPrint": null,
+        "Name": null,
+        "SerializedPartDoNotUse": "SourceData",
+        "Part": 4,
+        "ContentType": "application/json",
+        "ContentEncoding": null,
+        "Uri": null,
+        "Items": [],
+        "SerializedDataDoNotUse": {
+          "#cdata-section": "{\"is_intro\":false,\"client_msg_id\":\"22747db6-8e1d-43b7-ba0d-16db13c6d811\",\"user\":\"WULS9STHD\",\"text\":\"Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\\n\\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! :thankyou-2:\",\"type\":\"message\",\"ts\":\"1624996559.063900\",\"team\":\"T29KZ003T\",\"blocks\":[{\"type\":\"rich_text\",\"block_id\":\"geQh\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\\n\\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! \"},{\"type\":\"emoji\"}]}],\"image_width\":0,\"image_height\":0,\"image_bytes\":0,\"is_animated\":false}]}"
+        },
+        "Data": "{\"is_intro\":false,\"client_msg_id\":\"22747db6-8e1d-43b7-ba0d-16db13c6d811\",\"user\":\"WULS9STHD\",\"text\":\"Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\\n\\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! :thankyou-2:\",\"type\":\"message\",\"ts\":\"1624996559.063900\",\"team\":\"T29KZ003T\",\"blocks\":[{\"type\":\"rich_text\",\"block_id\":\"geQh\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\\n\\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! \"},{\"type\":\"emoji\"}]}],\"image_width\":0,\"image_height\":0,\"image_bytes\":0,\"is_animated\":false}]}"
+      },
+      {
+        "Id": null,
+        "SourceObjectId": null,
+        "RevisionId": null,
+        "FingerPrint": null,
+        "Name": null,
+        "SerializedPartDoNotUse": "Body",
+        "Part": 2,
+        "ContentType": "text/plain",
+        "ContentEncoding": null,
+        "Uri": null,
+        "Items": [],
+        "SerializedDataDoNotUse": {
+          "#cdata-section": "Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\n\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! :thankyou-2:"
+        },
+        "Data": "Ah yes, this is odd to hear about! Sorry to hear about the confusing behavior here.\n\nOur folks on the support team might be able to identify what’s up--if you can log a ticket, I’ll keep an eye out for the ticket and follow along to make sure we get this sorted for you! :thankyou-2:"
+      }
+    ]
+  },
+  "RelatedObjectsSpecified": false
+}
